@@ -10,7 +10,7 @@ class KotlinConsumer {
     private val logger = LoggerFactory.getLogger(javaClass)
 
     @KafkaListener(topics=["simple-message-topic"],
-                   groupId="simple-kotling-consumer")
+                   groupId="simple-kotlin-consumer")
     fun processMessage(message: String) {
         logger.info("got message: {}", message)
     }
